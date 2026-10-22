@@ -1,0 +1,96 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Government job notifications, recruitment updates, admit cards, results and exam information across India.">
+  <title>GovtJobUpdates.In — Government Job Updates Across India</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; color: #172033; background: #f4f7fb; line-height: 1.6; }
+    header { background: #10264a; color: white; padding: 22px 18px; }
+    .wrap { max-width: 1050px; margin: auto; }
+    .brand { font-size: 25px; font-weight: 700; }
+    nav { margin-top: 12px; display: flex; gap: 18px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; }
+    .hero { padding: 48px 20px; background: white; text-align: center; }
+    h1 { font-size: clamp(28px, 5vw, 43px); line-height: 1.2; margin: 0 0 14px; }
+    .hero p { color: #526078; max-width: 650px; margin: 0 auto 24px; }
+    .search { width: min(100%, 520px); padding: 14px; border: 1px solid #ccd5e2; border-radius: 8px; font-size: 16px; }
+    main { padding: 30px 18px 50px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .card { background: white; padding: 22px; border-radius: 12px; border: 1px solid #e0e7f0; }
+    .card h2 { font-size: 19px; margin-top: 0; }
+    .tag { display: inline-block; background: #e6f0ff; color: #174b91; padding: 4px 9px; border-radius: 20px; font-size: 13px; }
+    footer { background: #10264a; color: white; padding: 24px 18px; text-align: center; }
+    footer a { color: white; margin: 0 8px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">GovtJobUpdates.In</div>
+      <nav aria-label="Main navigation">
+        <a href="#latest">Latest Jobs</a>
+        <a href="#admit-cards">Admit Cards</a>
+        <a href="#results">Results</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Government Job Updates Across India</h1>
+    <p>Find recruitment notifications, eligibility details, important dates, admit cards and results in one place.</p>
+    <input class="search" type="search" placeholder="Search government job updates…" aria-label="Search updates" oninput="filterCards(this.value)">
+  </section>
+
+  <main class="wrap">
+    <section id="latest">
+      <h2>Latest Recruitment Updates</h2>
+      <p>Verified recruitment notices will be published here with links to official sources.</p>
+      <div class="grid" id="job-list">
+        <article class="card">
+          <span class="tag">Website setup</span>
+          <h2>Our recruitment portal is being prepared</h2>
+          <p>Real vacancy announcements will appear here after they have been checked against official notifications.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Official sources</span>
+          <h2>Check notifications carefully</h2>
+          <p>Always confirm eligibility, deadlines and application instructions on the recruiting organisation’s official website.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="admit-cards">
+      <h2>Admit Cards</h2>
+      <p>Exam admit-card updates will be added here.</p>
+    </section>
+
+    <section id="results">
+      <h2>Results</h2>
+      <p>Official exam-result links will be added here.</p>
+    </section>
+
+    <section id="about">
+      <h2>About GovtJobUpdates.In</h2>
+      <p>An independent information portal planned to help candidates find government recruitment updates across India. We are not a government website.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>GovtJobUpdates.In — Independent recruitment information portal</p>
+    <p>Always verify details with the official recruiting authority.</p>
+  </footer>
+
+  <script>
+    function filterCards(query) {
+      document.querySelectorAll('#job-list .card').forEach(card => {
+        card.hidden = !card.innerText.toLowerCase().includes(query.toLowerCase());
+      });
+    }
+  </script>
+</body>
+</html>
