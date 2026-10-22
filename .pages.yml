@@ -1,0 +1,72 @@
+
+media:
+  input: src/assets
+  output: /assets
+
+content:
+  - name: pages
+    label: Website Pages
+    type: collection
+    path: src/pages
+    filename: "{primary}.md"
+    fields:
+      - name: title
+        label: Page Title
+        type: string
+        required: true
+      - name: body
+        label: Page Content
+        type: rich-text
+        required: true
+
+  - name: jobs
+    label: Recruitment Updates
+    type: collection
+    path: src/jobs
+    filename: "{primary}.md"
+    view:
+      fields: [title, organization, lastDate, status]
+      primary: title
+    fields:
+      - name: title
+        label: Recruitment Title
+        type: string
+        required: true
+      - name: organization
+        label: Recruiting Organization
+        type: string
+        required: true
+      - name: slug
+        label: URL Slug
+        type: string
+        required: true
+      - name: status
+        label: Publication Status
+        type: string
+        required: true
+      - name: date
+        label: Publication Date
+        type: date
+        required: true
+      - name: lastDate
+        label: Application Deadline
+        type: date
+      - name: vacancies
+        label: Number of Vacancies
+        type: string
+      - name: qualification
+        label: Required Qualification
+        type: string
+      - name: location
+        label: Job Location
+        type: string
+      - name: officialNotification
+        label: Official Notification URL
+        type: string
+      - name: officialApply
+        label: Official Application URL
+        type: string
+      - name: body
+        label: Recruitment Details
+        type: rich-text
+        required: true
