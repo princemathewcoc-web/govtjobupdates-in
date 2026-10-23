@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ description or 'Government job notifications, admit cards, results, and recruitment updates across India.' }}">
+  <meta name="theme-color" content="#12305a">
+  <title>{{ title or 'GovtJobUpdates.In' }} | GovtJobUpdates.In</title>
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">GovtJobUpdates<span>.In</span></a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/jobs/">Latest Jobs</a>
+        <a href="/admit-cards/">Admit Cards</a>
+        <a href="/results/">Results</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>GovtJobUpdates.In — Government recruitment information across India.</p>
+      <p>Always verify recruitment details on the relevant official website.</p>
+      <nav aria-label="Footer navigation">
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/disclaimer/">Disclaimer</a>
+      </nav>
+      <p>© {{ "now" | date("%Y") }} GovtJobUpdates.In</p>
+    </div>
+  </footer>
+</body>
+</html>
